@@ -19,7 +19,9 @@ Login to AWS console and navigate to `Code Artifact` to create repository
 
 1. Create Domain
 2. Create Repositories
-!(greet-api repo)[./docs/greet-api-repo.png]
+!(greet-api repo)[./docs/createrepo1.png]
+!(greet-api repo)[./docs/createrepo2.png]
+!(greet-api repo)[./docs/greet-repo.png]
 3. make sure that user has AWSCodeArtifactAdminAccess IAM policy Attached.
 4. export AUTH_TOKEN
 ```$ export CODEARTIFACT_AUTH_TOKEN=`aws codeartifact get-authorization-token --domain mano --domain-owner 146958887```
