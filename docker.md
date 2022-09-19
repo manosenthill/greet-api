@@ -60,7 +60,7 @@ So, if you start with an image that already has Java installed, we won’t have 
 #### Building the dockerfile
     Before building our Dockerfile we have to build our application using
     ``` ./gradlew build```
-    Now our jar file is ready.It's inside the folder '''build/libs/'''    
+    Now our jar file is ready.If you are using gradle the jar should be inside the folder '''build/libs/'''  .If it's Maven  it should be in ```target```
 Get the base image
 ```FROM openjdk:8-jdk-alpine```
  which pulls jdk 8 installed on alpine os.
