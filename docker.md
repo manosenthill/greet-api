@@ -49,7 +49,7 @@ Navigate to the completed project and add an empty file in this directory called
 ```cd greet-api```
 ```touch Dockerfile```
 ```what a Dockerfile does.```
-First, a Dockerfile always starts with another image called a “base-image”. This is the building block for our image, and examples include things like a red hat image or an Ubuntu image. This image can be as fat or as lean as you’d like, as we can add things to this image or build “layers”.
 
+First, a Dockerfile always starts with another image called a “base-image”. This is the building block for our image, and examples include things like a red hat image or an Ubuntu image. This image can be as fat or as lean as you’d like, as we can add things to this image or build “layers”.
 So, if you start with an image that already has Java installed, we won’t have to install Java later in the Dockerfile. If you don’t start with an image that is already installed, then we’ll have to install Java. At the end, this Dockerfile will be used to build another image. This final image (with all dependencies and your application added) can be delivered to those who want to run your application.
 
