@@ -66,3 +66,6 @@ So, if you start with an image that already has Java installed, we won’t have 
  which pulls jdk 8 installed on alpine os.
 ##### Copy the jar file into the current directory
 ``` COPY build/libs/greet-api-1.0-SNAPSHOT.jar .```
+##### Run the application
+An ENTRYPOINT instruction is used to set executables that will always run when the container is initiated.
+```ENTRYPOINT ["java","-jar","/greet-api-1.0-SNAPSHOT.jar"]```
