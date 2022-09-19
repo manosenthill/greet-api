@@ -39,17 +39,29 @@ Ensure that you have docker installed by running by checking with the following 
 $ docker --version
 #### Clone A Java Application
 ```$ git clone https://github.com/manosenthill/greet-api.git```
+
 ```Cloning into 'greet-api'...
 remote: Enumerating objects: 54, done.
 remote: Counting objects: 100% (54/54), done.
 remote: Compressing objects: 100% (43/43), done.
 remote: Total 54 (delta 13), reused 22 (delta 0), pack-reused 0
-Unpacking objects: 100% (54/54), done.```
-Navigate to the completed project and add an empty file in this directory called Dockerfile$ 
-```cd greet-api```
-```touch Dockerfile```
-```what a Dockerfile does.```
+Unpacking objects: 100% (54/54), done.
+```
+Navigate to the completed project and add an empty file in this directory called Dockerfile 
 
+```$ cd greet-api```
+```$ touch Dockerfile```
+
+### what a Dockerfile does.
 First, a Dockerfile always starts with another image called a “base-image”. This is the building block for our image, and examples include things like a red hat image or an Ubuntu image. This image can be as fat or as lean as you’d like, as we can add things to this image or build “layers”.
+
 So, if you start with an image that already has Java installed, we won’t have to install Java later in the Dockerfile. If you don’t start with an image that is already installed, then we’ll have to install Java. At the end, this Dockerfile will be used to build another image. This final image (with all dependencies and your application added) can be delivered to those who want to run your application.
 
+#### Building the dockerfile
+    Before building our Dockerfile we have to build our application using
+    ```./gradlew build```
+    Now our jar file is ready.It's inside the folder '''build/libs/'''    
+Get the base image
+```FROM openjdk:8-jdk-alpine```
+ which pulls jdk 8 installed on alpine os.
+####
