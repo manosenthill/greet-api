@@ -26,40 +26,10 @@ Since containers are lightweight, they consume a lot less resources of the host 
 
 Now, What is Docker?
 Docker is a tool which helps in developing, shipping, and running your applications on containers and enables you to separate your applications from your infrastructure so you can deliver software quickly.
+It solves the problem of “it runs on my machine”. Instead of delivering jars, wars, whatever — you deliver “images”.
 
+All someone needs to run your “image” on their machine is Docker installed.
 
-Image Source
-It provides the ability to package and run an application in an isolated environment i.e; containers. The isolation and security allows you to run many containers simultaneously on a given host.
+This is awesome because the previous standard was to deliver artifacts, which means there was a dependency on environment setup and dependencies installed. But now, all of that is delivered in your image! “It runs on my machine” is now much much less of a thing.
 
-Some basic Docker terminology
-Docker Engine
-The Docker Engine is the core containerization technology responsible for creating and managing all the containers and other Docker objects. It acts a client-server application consisting of:
-
-The Docker Daemon, which is a daemon process that runs in the background, keeps listening for any API requests and manages the Docker objects accordingly
-A set of APIs in order to communicate with the Docker daemon
-The Docker CLI client which helps users to communicate with the docker daemon and carry out the user’s requests by using these Docker APIs
-Docker Image
-A Docker image is just a template which includes a set of instructions or commands that are used in order to create the actual container. We can use the same docker image to create multiple docker containers
-
-Docker Container
-A Docker container is the actual instance which is based off of an image, and packages all the dependencies, libraries that an application needs and runs it in loosely coupled isolation
-
-References
-https://docs.docker.com/get-started/overview/
-https://www.ibm.com/cloud/blog/containers-vs-vms
-https://opensource.com/resources/virtualization
-Apache Kafka: A Basic Intro
-In this blog post I’ll be giving a brief and basic introduction regarding Apache Kafka and the terminology that would…
-medium.com
-
-Follow for more articles related to Docker and Software Engineering in general :)
-
-You can also find me on
-• GitHub
-• Dev.to
-
-13
-
-
-
-
+Here we are going create a Dockerfile for a simple java application, build an image, push our image to Amazon's ECR, and run our containerized application.
