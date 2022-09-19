@@ -91,3 +91,9 @@ Removing intermediate container 7ad871461550
 Successfully built d03c3507dd02
 Successfully tagged first-image:latest
 ```
+You can verify the image built correctly with docker images :
+```$ docker images ```
+```
+REPOSITORY                                              TAG                 IMAGE ID            CREATED             SIZE
+first-image                                             latest              d03c3507dd02        6 minutes ago       122MB
+```
