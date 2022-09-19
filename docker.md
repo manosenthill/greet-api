@@ -38,10 +38,10 @@ Ensure that you have docker installed by running by checking with the following 
 #### Dockerfile
 $ docker --version
 #### Clone A Java Application
-```$ git clone https://github.com/manosenthill/greet-api.git```
+```$ git clone https://github.com/manosenthill/greet-api.git
 Cloning into 'greet-api'...
 remote: Enumerating objects: 54, done.
 remote: Counting objects: 100% (54/54), done.
 remote: Compressing objects: 100% (43/43), done.
 remote: Total 54 (delta 13), reused 22 (delta 0), pack-reused 0
-Unpacking objects: 100% (54/54), done.
+Unpacking objects: 100% (54/54), done.```
