@@ -24,7 +24,7 @@ Containers are a light-weight, more agile way of handling virtualization, and si
 Image Source
 Since containers are lightweight, they consume a lot less resources of the host machine compared to virtual machines. You can easily share containers while you work, and be sure that everyone you share with gets the same container that works in the same way irrespective of version conflicts between dependencies or OS.
 
-Now, What is Docker?
+### Now, What is Docker?
 Docker is a tool which helps in developing, shipping, and running your applications on containers and enables you to separate your applications from your infrastructure so you can deliver software quickly.
 It solves the problem of “it runs on my machine”. Instead of delivering jars, wars, whatever — you deliver “images”.
 
@@ -32,4 +32,16 @@ All someone needs to run your “image” on their machine is Docker installed.
 
 This is awesome because the previous standard was to deliver artifacts, which means there was a dependency on environment setup and dependencies installed. But now, all of that is delivered in your image! “It runs on my machine” is now much much less of a thing.
 
-Here we are going create a Dockerfile for a simple java application, build an image, push our image to Amazon's ECR, and run our containerized application.
+#### Here we are going create a Dockerfile for a simple java application, build an image, push our image to Amazon's ECR, and run our containerized application.
+Ensure that you have docker installed by running by checking with the following command in your terminal:
+
+#### Dockerfile
+$ docker --version
+#### Clone A Java Application
+```$ git clone https://github.com/manosenthill/greet-api.git```
+Cloning into 'greet-api'...
+remote: Enumerating objects: 54, done.
+remote: Counting objects: 100% (54/54), done.
+remote: Compressing objects: 100% (43/43), done.
+remote: Total 54 (delta 13), reused 22 (delta 0), pack-reused 0
+Unpacking objects: 100% (54/54), done.
