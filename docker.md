@@ -102,3 +102,18 @@ Finally run our docker image using run command.Here the port 8090 is used .
 
 ```docker run -e SERVER_PORT=8090 -p 8090:8090 first-image```
 thats our image is Up and running. Just right there we have an alpine machine running our java application. 
+#### Pushing the docker image to Amazon Elastic container Registry
+ ##### Create an IAM user with an AdministratorAcces policy granted.
+ ##### Create Repository
+ Get started with Amazon ECR by creating a repository in the Amazon ECR console.
+ A repository is where you store your Docker or Open Container Initiative (OCI) images in Amazon ECR. Each time you push or pull an image from Amazon ECR, you specify the repository and the registry location which informs where to push the image to or where to pull it from.
+ ###### Retrieve an authentication token and authenticate your Docker client to your registry.
+Use the AWS CLI: ```
+ $ aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 146958887687.dkr.ecr.us-east-1.amazonaws.com
+Login Succeeded ```
+
+###### Tag your image so you can push the image to this repository
+``` $ docker tag first-image:latest 146958887687.dkr.ecr.us-east-1.amazonaws.com/chumma:latest```
+      Here first-image is the name of our docker image and chumma is our repository name.
+###### push this image to your newly created AWS repository chumma
+```docker push 146958887687.dkr.ecr.us-east-1.amazonaws.com/chumma:latest```
