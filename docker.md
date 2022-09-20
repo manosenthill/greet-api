@@ -117,3 +117,9 @@ Login Succeeded ```
       Here first-image is the name of our docker image and chumma is our repository name.
 ###### push this image to your newly created AWS repository chumma
 ```docker push 146958887687.dkr.ecr.us-east-1.amazonaws.com/chumma:latest```
+```The push refers to a repository [146958887687.dkr.ecr.us-east-1.amazonaws.com/chumma]
+12a8c864cfe0: Pushed 
+ceaf9e1ebef5: Pushed 
+9b9b7f3d56a0: Pushed 
+f1b5933fe4b5: Pushed 
+latest: digest: sha256:c7a56dfc0a7c95d0d45873ee843ae65d7743571cf56f1e4641cf99214fb95313 size: 1159```
