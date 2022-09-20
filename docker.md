@@ -98,4 +98,7 @@ REPOSITORY                                              TAG                 IMAG
 first-image                                             latest              d03c3507dd02        6 minutes ago       122MB
 ```
 Finally run our docker image using run command.Here the port 8090 is used .
+
+
 ```docker run -e SERVER_PORT=8090 -p 8090:8090 first-image```
+thats our image is Up and running. Just right there we have an alpine machine running our java application. 
