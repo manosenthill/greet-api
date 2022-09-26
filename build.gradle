@@ -2,6 +2,7 @@ plugins {
     id 'java'
     id 'org.springframework.boot' version '2.7.0'
     id 'org.sonarqube' version '3.1'
+    id 'maven-publish'
 }
 
 group 'org.myorg'
@@ -23,4 +24,23 @@ dependencies {
 
 test {
     useJUnitPlatform()
+}
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            groupId = 'org.myorg'
+            artifactId = 'greet-api'
+            version = '1.0'
+            from components.java
+        }
+    }
+    repositories {
+        maven {
+            url 'https://padhu-146958887687.d.codeartifact.us-east-1.amazonaws.com/maven/greet-jen-artifact/'
+            credentials {
+                username "aws"
+                password System.env.CODEARTIFACT_AUTH_TOKEN
+            }
+        }
+    }
 }
