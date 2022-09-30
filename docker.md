@@ -77,7 +77,7 @@ ENTRYPOINT ["java","-jar","/greet-api-1.0-SNAPSHOT.jar"]
 save the Dockerfile.
 ##### Build the dockerImage
 To build the image with the name first-image
-```docker build . -t first-image```
+```docker build . -t greet-api```
 ```
 Sending build context to Docker daemon  18.98MB
 Step 1/3 : FROM openjdk:8-jdk-alpine
@@ -89,18 +89,18 @@ Step 3/3 : ENTRYPOINT java -jar /greet-api-1.0-SNAPSHOT.jar
  ---> d03c3507dd02
 Removing intermediate container 7ad871461550
 Successfully built d03c3507dd02
-Successfully tagged first-image:latest
+Successfully tagged greet-api:latest
 ```
 You can verify the image built correctly with docker images :
 ```$ docker images ```
 ```
 REPOSITORY                                              TAG                 IMAGE ID            CREATED             SIZE
-first-image                                             latest              d03c3507dd02        6 minutes ago       122MB
+greet-api                                             latest              d03c3507dd02        6 minutes ago       122MB
 ```
 Finally run our docker image using run command.Here the port 8090 is used .
 
 
-```docker run -e SERVER_PORT=8090 -p 8090:8090 first-image```
+```docker run -e SERVER_PORT=8090 -p 8090:8090 greet-api```
 thats our image is Up and running. Just right there we have an alpine machine running our java application. 
 #### Pushing the docker image to Amazon Elastic container Registry
  ##### Create an IAM user with an AdministratorAcces policy granted.
@@ -113,11 +113,11 @@ Use the AWS CLI: ```
 Login Succeeded ```
 
 ###### Tag your image so you can push the image to this repository
-``` $ docker tag first-image:latest 146958887687.dkr.ecr.us-east-1.amazonaws.com/chumma:latest```
-      Here first-image is the name of our docker image and chumma is our repository name.
+``` $ docker tag first-image:latest 146958887687.dkr.ecr.us-east-1.amazonaws.com/greet-api:latest```
+      Here first-image is the name of our docker image and greet-api is our repository name.
 ###### push this image to your newly created AWS repository chumma
-```docker push 146958887687.dkr.ecr.us-east-1.amazonaws.com/chumma:latest```
-```The push refers to a repository [146958887687.dkr.ecr.us-east-1.amazonaws.com/chumma]
+```docker push 146958887687.dkr.ecr.us-east-1.amazonaws.com/greet-api:latest```
+```The push refers to a repository [146958887687.dkr.ecr.us-east-1.amazonaws.com/greet-api]
 12a8c864cfe0: Pushed 
 ceaf9e1ebef5: Pushed 
 9b9b7f3d56a0: Pushed 
