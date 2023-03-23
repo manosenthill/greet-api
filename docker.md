@@ -70,10 +70,11 @@ So, if you start with an image that already has Java installed, we won’t have 
 An ENTRYPOINT instruction is used to set executables that will always run when the container is initiated.
 ```ENTRYPOINT ["java","-jar","/greet-api-1.0-SNAPSHOT.jar"]```
 our Dockerfile will be 
-``` FROM openjdk:8-jdk-alpine
+~~~
+FROM openjdk:8-jdk-alpine
 COPY build/libs/greet-api-1.0-SNAPSHOT.jar .
 ENTRYPOINT ["java","-jar","/greet-api-1.0-SNAPSHOT.jar"] 
-```
+~~~
 save the Dockerfile.
 ##### Build the dockerImage
 To build the image with the name first-image
